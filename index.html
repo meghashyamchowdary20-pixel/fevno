@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>FEVNO — Streetwear × South Indian Culture</title>
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -28,7 +30,8 @@
       text-decoration: none;
     }
 
-    /* NAVIGATION */
+    /* NAVBAR */
+
     header {
       position: sticky;
       top: 0;
@@ -42,6 +45,7 @@
       max-width: 1200px;
       margin: auto;
       padding: 18px 24px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -57,6 +61,7 @@
     .nav-links {
       display: flex;
       gap: 25px;
+
       font-size: 14px;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -67,13 +72,18 @@
     }
 
     /* HERO */
+
     .hero {
       min-height: 85vh;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       text-align: center;
+
       padding: 70px 20px;
+
       background:
         radial-gradient(
           circle at center,
@@ -89,34 +99,47 @@
     .hero h1 {
       font-size: clamp(55px, 12vw, 140px);
       line-height: 0.9;
+
       letter-spacing: 10px;
       font-weight: 900;
     }
 
     .hero h2 {
       margin-top: 25px;
+
       color: #c99645;
+
       font-size: clamp(18px, 3vw, 30px);
+
       letter-spacing: 5px;
       text-transform: uppercase;
     }
 
     .hero p {
       max-width: 650px;
+
       margin: 25px auto;
+
       color: #c9c0b1;
+
       font-size: 17px;
     }
 
     .hero-btn {
       display: inline-block;
+
       margin-top: 15px;
+
       padding: 15px 30px;
+
       background: #c99645;
       color: #090807;
+
       font-weight: 900;
       letter-spacing: 2px;
+
       border-radius: 3px;
+
       transition: 0.3s;
     }
 
@@ -126,17 +149,24 @@
     }
 
     /* SECTIONS */
+
     section {
       max-width: 1200px;
+
       margin: auto;
+
       padding: 90px 24px;
     }
 
     .section-title {
       text-align: center;
+
       font-size: 40px;
+
       letter-spacing: 4px;
+
       margin-bottom: 50px;
+
       text-transform: uppercase;
     }
 
@@ -145,49 +175,68 @@
     }
 
     /* SHOP */
+
     .shop-grid {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 25px;
     }
 
     .card {
       background: #11100e;
+
       border: 1px solid rgba(244, 234, 216, 0.12);
+
       overflow: hidden;
+
       transition: 0.3s;
     }
 
     .card:hover {
       transform: translateY(-7px);
+
       border-color: #c99645;
     }
 
     .photo {
       position: relative;
+
       width: 100%;
       height: 430px;
+
       overflow: hidden;
+
       background: #151311;
     }
 
     .photo img {
       width: 100%;
       height: 100%;
+
       object-fit: cover;
+
       display: block;
     }
 
     .badge {
       position: absolute;
+
       top: 15px;
       left: 15px;
+
       z-index: 2;
+
       background: #7b251d;
       color: #f4ead8;
+
       padding: 6px 10px;
+
       font-size: 11px;
+
       font-weight: bold;
+
       letter-spacing: 1px;
     }
 
@@ -197,56 +246,79 @@
 
     .info h3 {
       font-size: 21px;
+
       margin-bottom: 5px;
     }
 
     .info p {
       color: #9f978c;
+
       font-size: 14px;
+
       margin-bottom: 15px;
     }
 
     .price {
       color: #c99645;
+
       font-size: 24px;
+
       font-weight: 900;
+
       margin-bottom: 15px;
     }
 
+    /* SIZES */
+
     .sizes {
       display: flex;
+
       gap: 7px;
+
       flex-wrap: wrap;
+
       margin-bottom: 20px;
     }
 
     .sizes span {
       border: 1px solid #4a4640;
+
       padding: 6px 10px;
+
       font-size: 12px;
     }
 
+    /* BUTTONS */
+
     .actions {
       display: flex;
+
       gap: 10px;
     }
 
     .actions a {
       flex: 1;
+
       text-align: center;
+
       padding: 12px 8px;
+
       font-size: 12px;
+
       font-weight: bold;
+
       letter-spacing: 1px;
     }
 
     .buy {
       background: #c99645;
+
       color: #090807;
     }
 
     .wa {
       border: 1px solid #c99645;
+
       color: #c99645;
     }
 
@@ -256,88 +328,119 @@
 
     .wa:hover {
       background: #c99645;
+
       color: #090807;
     }
 
     /* STORY */
+
     .story {
       text-align: center;
+
       max-width: 850px;
     }
 
     .story p {
       color: #c9c0b1;
+
       font-size: 17px;
+
       margin-bottom: 20px;
     }
 
     .highlight {
       color: #c99645;
+
       font-weight: bold;
     }
 
     /* CULTURE */
+
     .culture-grid {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 20px;
     }
 
     .culture-box {
       padding: 35px 25px;
+
       border: 1px solid rgba(244, 234, 216, 0.12);
+
       text-align: center;
+
       background: #11100e;
     }
 
     .culture-box h3 {
       color: #c99645;
+
       margin-bottom: 10px;
+
       font-size: 20px;
     }
 
     .culture-box p {
       color: #9f978c;
+
       font-size: 14px;
     }
 
     /* CONTACT */
+
     .join {
       text-align: center;
+
       border-top: 1px solid rgba(244, 234, 216, 0.12);
+
       border-bottom: 1px solid rgba(244, 234, 216, 0.12);
     }
 
     .join h2 {
       font-size: 42px;
+
       letter-spacing: 3px;
+
       margin-bottom: 15px;
     }
 
     .join p {
       color: #9f978c;
+
       margin-bottom: 25px;
     }
 
     .instagram {
       display: inline-block;
+
       border: 1px solid #c99645;
+
       padding: 13px 25px;
+
       color: #c99645;
+
       font-weight: bold;
+
       letter-spacing: 1px;
     }
 
     .instagram:hover {
       background: #c99645;
+
       color: #090807;
     }
 
     /* FOOTER */
+
     footer {
       text-align: center;
+
       padding: 35px 20px;
+
       color: #777168;
+
       font-size: 13px;
     }
 
@@ -345,10 +448,13 @@
       color: #c99645;
     }
 
-    /* MOBILE */
+    /* TABLET */
+
     @media (max-width: 800px) {
+
       .nav-links {
         gap: 12px;
+
         font-size: 11px;
       }
 
@@ -370,7 +476,10 @@
       }
     }
 
+    /* MOBILE */
+
     @media (max-width: 500px) {
+
       .nav {
         padding: 15px;
       }
@@ -390,14 +499,20 @@
       .photo {
         height: 450px;
       }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
+
   <!-- NAVIGATION -->
+
   <header>
+
     <nav class="nav">
 
       <a href="#" class="logo">
@@ -405,22 +520,39 @@
       </a>
 
       <div class="nav-links">
-        <a href="#shop">Shop</a>
-        <a href="#story">Story</a>
-        <a href="#culture">Culture</a>
-        <a href="#contact">Contact</a>
+
+        <a href="#shop">
+          Shop
+        </a>
+
+        <a href="#story">
+          Story
+        </a>
+
+        <a href="#culture">
+          Culture
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
       </div>
 
     </nav>
+
   </header>
 
 
   <!-- HERO -->
+
   <section class="hero">
 
     <div class="hero-content">
 
-      <h1>FEVNO</h1>
+      <h1>
+        FEVNO
+      </h1>
 
       <h2>
         Streetwear × South Indian Culture
@@ -428,8 +560,8 @@
 
       <p>
         Built for the ones who see more.
-        FEVNO brings modern streetwear together with South Indian identity,
-        attitude and culture.
+        FEVNO brings modern streetwear together
+        with South Indian identity, attitude and culture.
       </p>
 
       <a href="#shop" class="hero-btn">
@@ -442,16 +574,19 @@
 
 
   <!-- SHOP -->
+
   <section id="shop">
 
     <h2 class="section-title">
       OUR <span>DROP</span>
     </h2>
 
+
     <div class="shop-grid">
 
 
-      <!-- PRODUCT 1 — WINTER HOODIE -->
+      <!-- PRODUCT 1 -->
+
       <article class="card">
 
         <div class="photo">
@@ -467,6 +602,7 @@
 
         </div>
 
+
         <div class="info">
 
           <h3>
@@ -481,16 +617,21 @@
             ₹799
           </div>
 
+
           <div class="sizes">
+
             <span>XS</span>
             <span>S</span>
             <span>M</span>
             <span>L</span>
             <span>XL</span>
             <span>XXL</span>
+
           </div>
 
+
           <div class="actions">
+
             <a href="#contact" class="buy">
               BUY NOW
             </a>
@@ -498,6 +639,7 @@
             <a href="#contact" class="wa">
               WHATSAPP
             </a>
+
           </div>
 
         </div>
@@ -505,7 +647,9 @@
       </article>
 
 
-      <!-- PRODUCT 2 — FEVNO T-SHIRT -->
+
+      <!-- PRODUCT 2 -->
+
       <article class="card">
 
         <div class="photo">
@@ -515,11 +659,12 @@
           </span>
 
           <img
-            src="t-shirt.png"
+            src="FEVNO Streetwear Lookbook.png"
             alt="FEVNO T-Shirt"
           >
 
         </div>
+
 
         <div class="info">
 
@@ -535,15 +680,20 @@
             ₹999
           </div>
 
+
           <div class="sizes">
+
             <span>S</span>
             <span>M</span>
             <span>L</span>
             <span>XL</span>
             <span>XXL</span>
+
           </div>
 
+
           <div class="actions">
+
             <a href="#contact" class="buy">
               BUY NOW
             </a>
@@ -551,6 +701,7 @@
             <a href="#contact" class="wa">
               WHATSAPP
             </a>
+
           </div>
 
         </div>
@@ -558,7 +709,9 @@
       </article>
 
 
+
       <!-- PRODUCT 3 -->
+
       <article class="card">
 
         <div class="photo">
@@ -569,6 +722,7 @@
           >
 
         </div>
+
 
         <div class="info">
 
@@ -584,15 +738,20 @@
             ₹1,799
           </div>
 
+
           <div class="sizes">
+
             <span>S</span>
             <span>M</span>
             <span>L</span>
             <span>XL</span>
             <span>XXL</span>
+
           </div>
 
+
           <div class="actions">
+
             <a href="#contact" class="buy">
               BUY NOW
             </a>
@@ -600,117 +759,166 @@
             <a href="#contact" class="wa">
               WHATSAPP
             </a>
+
           </div>
 
         </div>
 
       </article>
 
+
     </div>
 
   </section>
 
 
+
   <!-- STORY -->
+
   <section id="story" class="story">
 
     <h2 class="section-title">
       THE <span>STORY</span>
     </h2>
 
+
     <p>
-      FEVNO was created for people who don't want to follow the crowd.
+      FEVNO was created for people who don't want
+      to follow the crowd.
     </p>
+
 
     <p>
       Our designs mix
-      <span class="highlight">street culture</span>,
-      South Indian roots and modern fashion into something different.
+      <span class="highlight">
+        street culture
+      </span>,
+      South Indian roots and modern fashion
+      into something different.
     </p>
 
+
     <p>
-      Every piece represents individuality, confidence and the mindset
-      to create your own path.
+      Every piece represents individuality,
+      confidence and the mindset to create
+      your own path.
     </p>
 
   </section>
 
 
+
   <!-- CULTURE -->
+
   <section id="culture">
 
     <h2 class="section-title">
       OUR <span>CULTURE</span>
     </h2>
 
+
     <div class="culture-grid">
 
+
       <div class="culture-box">
-        <h3>ROOTS</h3>
+
+        <h3>
+          ROOTS
+        </h3>
 
         <p>
           Inspired by South Indian culture,
           traditions and identity.
         </p>
+
       </div>
 
+
       <div class="culture-box">
-        <h3>STREET</h3>
+
+        <h3>
+          STREET
+        </h3>
 
         <p>
           Modern silhouettes and bold designs
           made for everyday streetwear.
         </p>
+
       </div>
 
+
       <div class="culture-box">
-        <h3>MINDSET</h3>
+
+        <h3>
+          MINDSET
+        </h3>
 
         <p>
           Not just clothes.
           A mindset for people who see more.
         </p>
+
       </div>
+
 
     </div>
 
   </section>
 
 
+
   <!-- CONTACT -->
+
   <section id="contact" class="join">
 
     <h2>
+
       JOIN THE
+
       <span class="highlight">
         FEVNO
       </span>
+
       MOVEMENT
+
     </h2>
 
+
     <p>
-      Follow us for new drops, designs and updates.
+      Follow us for new drops,
+      designs and updates.
     </p>
+
 
     <a
       href="https://www.instagram.com/fevno_/"
       target="_blank"
       class="instagram"
     >
+
       INSTAGRAM · @fevno_
+
     </a>
 
   </section>
 
 
+
   <!-- FOOTER -->
+
   <footer>
 
     © 2026
-    <strong>FEVNO</strong>.
+
+    <strong>
+      FEVNO
+    </strong>.
+
     Built for the ones who see more.
 
   </footer>
+
 
 </body>
 </html>
