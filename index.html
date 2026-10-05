@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>FEVNO — South Indian Streetwear</title>
+<title>FEVNO | South Indian Streetwear</title>
 
 <style>
 *{
@@ -23,24 +23,29 @@ body{
     font-family:Arial,Helvetica,sans-serif;
 }
 
-/* ================= NAVBAR ================= */
+a{
+    text-decoration:none;
+}
+
+/* ================= HEADER ================= */
 
 header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    z-index:999;
+    height:55px;
+    z-index:1000;
 
-    background:rgba(9,8,7,.82);
-    backdrop-filter:blur(14px);
+    background:rgba(8,7,6,.9);
+    backdrop-filter:blur(12px);
 
-    border-bottom:1px solid rgba(201,150,69,.25);
+    border-bottom:1px solid rgba(201,150,69,.45);
 }
 
 .nav{
-    max-width:1400px;
-    height:75px;
+    max-width:1450px;
+    height:55px;
     margin:auto;
     padding:0 45px;
 
@@ -51,7 +56,7 @@ header{
 
 .logo{
     color:#c99645;
-    font-size:25px;
+    font-size:22px;
     font-weight:900;
     letter-spacing:7px;
 }
@@ -64,26 +69,29 @@ header{
 
 .nav-links a{
     color:#f4ead8;
-    text-decoration:none;
-    font-size:11px;
+    font-size:10px;
     font-weight:700;
-    letter-spacing:1px;
+    letter-spacing:.5px;
+    transition:.3s;
 }
 
 .nav-links a:hover{
     color:#c99645;
 }
 
-.nav-instagram{
-    border:1px solid #c99645;
-    padding:11px 18px;
+.instagram-nav{
     color:#c99645 !important;
+    border:1px solid #c99645;
+    padding:9px 16px;
 }
 
 /* ================= HERO ================= */
 
 .hero{
-    min-height:100vh;
+    min-height:540px;
+    height:100vh;
+    max-height:720px;
+
     position:relative;
 
     display:flex;
@@ -91,23 +99,18 @@ header{
     justify-content:center;
 
     text-align:center;
-    overflow:hidden;
 
-    background:
-        radial-gradient(
-            circle at 50% 45%,
-            rgba(123,37,29,.35),
-            transparent 38%
+    background-image:
+        linear-gradient(
+            rgba(5,4,3,.43),
+            rgba(5,4,3,.72)
         ),
-        radial-gradient(
-            circle at 50% 50%,
-            rgba(201,150,69,.08),
-            transparent 60%
-        ),
-        #090807;
+        url("fevno-hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
-
-/* cinematic background texture */
 
 .hero::before{
     content:"";
@@ -115,27 +118,11 @@ header{
     inset:0;
 
     background:
-        linear-gradient(
-            rgba(9,8,7,.45),
-            rgba(9,8,7,.9)
+        radial-gradient(
+            circle at center,
+            transparent 20%,
+            rgba(0,0,0,.45) 100%
         );
-
-    pointer-events:none;
-}
-
-.hero::after{
-    content:"";
-    position:absolute;
-    inset:0;
-
-    opacity:.08;
-
-    background-image:
-        radial-gradient(#f4ead8 1px,transparent 1px);
-
-    background-size:5px 5px;
-
-    pointer-events:none;
 }
 
 .hero-content{
@@ -143,34 +130,32 @@ header{
     z-index:2;
 
     width:100%;
-    max-width:1200px;
-
-    padding:130px 25px 80px;
+    padding:100px 20px 50px;
 }
 
 .hero-small{
-    color:#c99645;
+    color:#f4ead8;
 
     font-size:12px;
     font-weight:800;
-    letter-spacing:7px;
 
-    margin-bottom:25px;
+    letter-spacing:6px;
+
+    margin-bottom:16px;
 }
 
 .hero-title{
-    font-size:clamp(90px,18vw,250px);
+    font-size:clamp(90px,14vw,180px);
 
-    line-height:.75;
+    line-height:.78;
 
     font-weight:1000;
 
-    letter-spacing:-12px;
+    letter-spacing:-8px;
 
     color:#f4ead8;
 
-    text-shadow:
-        0 0 40px rgba(201,150,69,.1);
+    text-shadow:0 5px 30px rgba(0,0,0,.7);
 }
 
 .hero-title span{
@@ -178,61 +163,69 @@ header{
 }
 
 .hero-line{
-    width:110px;
-    height:2px;
-
-    margin:40px auto 28px;
+    width:76px;
+    height:3px;
 
     background:#c99645;
+
+    margin:20px auto;
 }
 
 .hero-tagline{
-    font-size:17px;
+    color:#fff;
+
+    font-size:13px;
     font-weight:800;
 
-    letter-spacing:6px;
+    letter-spacing:5px;
+
+    margin-bottom:20px;
 }
 
 .hero-description{
-    max-width:600px;
+    max-width:520px;
 
-    margin:28px auto 35px;
+    margin:0 auto 25px;
 
-    color:#aaa297;
+    color:#ddd5ca;
 
-    font-size:14px;
-    line-height:1.8;
+    font-size:13px;
+
+    line-height:1.65;
 }
 
 .hero-button{
     display:inline-block;
 
-    padding:17px 35px;
-
-    background:#c99645;
+    background:#d39a3d;
     color:#090807;
 
-    text-decoration:none;
+    padding:13px 25px;
 
-    font-size:11px;
+    font-size:10px;
     font-weight:900;
-    letter-spacing:2px;
+
+    letter-spacing:1.5px;
 
     transition:.3s;
 }
 
 .hero-button:hover{
     background:#f4ead8;
-    transform:translateY(-3px);
+    transform:translateY(-2px);
 }
 
 /* ================= DROP ================= */
 
 .drop{
+    background:#090807;
+
+    padding:30px 45px 35px;
+}
+
+.drop-container{
     max-width:1400px;
     margin:auto;
-
-    padding:110px 45px;
 }
 
 .drop-heading{
@@ -240,67 +233,71 @@ header{
     align-items:end;
     justify-content:space-between;
 
-    margin-bottom:50px;
+    margin-bottom:20px;
 }
 
 .drop-label{
     color:#c99645;
 
-    font-size:12px;
+    font-size:13px;
     font-weight:800;
 
-    letter-spacing:4px;
+    letter-spacing:2px;
 
-    margin-bottom:12px;
+    margin-bottom:5px;
 }
 
 .drop-title{
-    font-size:70px;
+    color:#f4ead8;
 
+    font-size:54px;
     line-height:.9;
 
-    letter-spacing:-4px;
+    font-weight:1000;
+
+    letter-spacing:-2px;
 }
 
 .drop-side{
-    color:#777168;
+    color:#e1d7c8;
 
-    font-size:11px;
+    font-size:9px;
+
     letter-spacing:2px;
+
+    padding-bottom:7px;
 }
 
 /* ================= PRODUCTS ================= */
 
 .products{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
 
-    gap:25px;
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
 }
 
 .product{
+    min-height:265px;
+
     display:grid;
-    grid-template-columns:48% 52%;
 
-    min-height:430px;
+    grid-template-columns:42% 58%;
 
-    background:#11100e;
+    border:1px solid rgba(244,234,216,.2);
 
-    border:1px solid rgba(244,234,216,.15);
+    background:#0b0a09;
 
-    transition:.35s;
-}
-
-.product:hover{
-    border-color:#c99645;
-    transform:translateY(-5px);
+    overflow:hidden;
 }
 
 .product-image{
-    min-height:430px;
+    height:265px;
+
     overflow:hidden;
 
-    background:#171513;
+    background:#151310;
 }
 
 .product-image img{
@@ -314,12 +311,12 @@ header{
     transition:.5s;
 }
 
-.product:hover img{
-    transform:scale(1.05);
+.product:hover .product-image img{
+    transform:scale(1.04);
 }
 
 .product-info{
-    padding:35px 28px;
+    padding:20px;
 
     display:flex;
     flex-direction:column;
@@ -329,76 +326,83 @@ header{
 .product-number{
     color:#c99645;
 
-    font-size:10px;
+    font-size:9px;
     font-weight:900;
 
     letter-spacing:3px;
 
-    margin-bottom:15px;
+    margin-bottom:8px;
 }
 
 .product-name{
-    font-size:25px;
-    line-height:1.1;
+    color:#f4ead8;
 
-    margin-bottom:15px;
+    font-size:19px;
+
+    margin-bottom:8px;
 }
 
 .product-description{
-    color:#918a80;
+    color:#aaa39a;
 
-    font-size:12px;
-    line-height:1.7;
+    font-size:11px;
 
-    margin-bottom:22px;
+    line-height:1.45;
+
+    margin-bottom:12px;
 }
 
 .price{
-    font-size:25px;
+    color:#f4ead8;
+
+    font-size:22px;
     font-weight:900;
 
-    margin-bottom:18px;
+    margin-bottom:12px;
 }
 
 .sizes{
     display:flex;
-    gap:6px;
 
-    margin-bottom:25px;
+    gap:5px;
+
+    margin-bottom:14px;
 }
 
 .size{
-    min-width:34px;
+    min-width:32px;
 
-    padding:8px 9px;
+    padding:7px 5px;
 
     text-align:center;
 
-    border:1px solid #403a33;
+    border:1px solid #5b554d;
 
-    color:#b7aea2;
+    color:#eee5d9;
 
-    font-size:10px;
+    font-size:9px;
 }
 
 .instagram-button{
-    display:block;
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
 
     width:100%;
 
-    padding:14px;
+    background:#d59b3c;
+    color:#080706;
 
-    text-align:center;
+    padding:12px;
 
-    background:#c99645;
-    color:#090807;
+    font-size:9px;
 
-    text-decoration:none;
-
-    font-size:10px;
     font-weight:900;
 
-    letter-spacing:1.5px;
+    letter-spacing:.8px;
 
     transition:.3s;
 }
@@ -407,66 +411,83 @@ header{
     background:#f4ead8;
 }
 
+.instagram-icon{
+    font-size:15px;
+}
+
 /* ================= CULTURE ================= */
 
 .culture{
-    background:#f4ead8;
+    min-height:270px;
+
+    position:relative;
+
+    background-image:
+        linear-gradient(
+            rgba(244,234,216,.72),
+            rgba(244,234,216,.82)
+        ),
+        url("fevno-culture.jpg");
+
+    background-size:cover;
+    background-position:center;
 
     color:#090807;
 }
 
-.culture-inner{
+.culture-container{
     max-width:1400px;
+
+    min-height:270px;
 
     margin:auto;
 
-    min-height:520px;
-
-    padding:90px 45px;
+    padding:35px 45px;
 
     display:grid;
 
     grid-template-columns:1fr 1fr;
 
-    gap:80px;
+    gap:50px;
 
     align-items:center;
 }
 
 .culture-small{
     font-size:12px;
-    letter-spacing:5px;
+
     font-weight:800;
 
-    margin-bottom:15px;
+    letter-spacing:6px;
+
+    margin-bottom:8px;
 }
 
 .culture-title{
-    font-size:75px;
+    font-size:55px;
 
     line-height:.85;
 
-    letter-spacing:-5px;
-}
+    font-weight:1000;
 
-.culture-title span{
-    color:#7b251d;
+    letter-spacing:-3px;
 }
 
 .culture-text{
-    max-width:570px;
+    max-width:500px;
 
-    margin-top:30px;
+    margin-top:22px;
 
-    color:#514b44;
+    font-size:13px;
 
-    font-size:15px;
-
-    line-height:1.8;
+    line-height:1.65;
 }
 
 .culture-card{
-    min-height:300px;
+    width:280px;
+    height:155px;
+
+    margin:auto;
 
     border:1px solid #7b251d;
 
@@ -474,9 +495,8 @@ header{
 
     flex-direction:column;
 
-    justify-content:center;
-
     align-items:center;
+    justify-content:center;
 
     text-align:center;
 }
@@ -484,28 +504,29 @@ header{
 .culture-number{
     color:#7b251d;
 
-    font-size:80px;
-
-    font-weight:900;
+    font-size:58px;
 
     line-height:1;
+
+    font-weight:1000;
 }
 
 .culture-card-text{
-    margin-top:20px;
+    margin-top:10px;
 
-    font-size:11px;
+    font-size:9px;
+
     font-weight:900;
 
-    letter-spacing:4px;
+    letter-spacing:3px;
+
+    line-height:1.5;
 }
 
 /* ================= INSTAGRAM ================= */
 
 .instagram-section{
-    min-height:400px;
-
-    padding:100px 25px;
+    min-height:190px;
 
     display:flex;
 
@@ -517,46 +538,43 @@ header{
 
     text-align:center;
 
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(123,37,29,.25),
-            transparent 50%
+    position:relative;
+
+    background-image:
+        linear-gradient(
+            rgba(5,4,3,.7),
+            rgba(5,4,3,.88)
         ),
-        #090807;
+        url("fevno-instagram.jpg");
+
+    background-size:cover;
+    background-position:center;
 }
 
 .instagram-section h2{
-    font-size:55px;
+    font-size:23px;
 
-    letter-spacing:-3px;
-
-    margin-bottom:15px;
+    margin-bottom:10px;
 }
 
 .instagram-section p{
-    color:#8e887f;
+    color:#c5bdb3;
 
-    font-size:13px;
+    font-size:10px;
 
-    margin-bottom:30px;
+    margin-bottom:18px;
 }
 
 .instagram-main{
-    display:inline-block;
-
-    padding:15px 30px;
-
     border:1px solid #c99645;
 
     color:#c99645;
 
-    text-decoration:none;
+    padding:11px 22px;
 
-    font-size:11px;
+    font-size:10px;
+
     font-weight:900;
-
-    letter-spacing:2px;
 
     transition:.3s;
 }
@@ -569,9 +587,11 @@ header{
 /* ================= FOOTER ================= */
 
 footer{
-    border-top:1px solid rgba(244,234,216,.15);
+    background:#090807;
 
-    padding:45px;
+    border-top:1px solid rgba(244,234,216,.2);
+
+    padding:15px 45px 10px;
 }
 
 .footer{
@@ -581,15 +601,16 @@ footer{
 
     display:flex;
 
-    justify-content:space-between;
-
     align-items:center;
+
+    justify-content:space-between;
 }
 
 .footer-logo{
     color:#c99645;
 
-    font-size:24px;
+    font-size:20px;
+
     font-weight:900;
 
     letter-spacing:6px;
@@ -598,15 +619,15 @@ footer{
 .footer-links{
     display:flex;
 
-    gap:28px;
+    gap:27px;
 }
 
 .footer-links a{
-    color:#8f887e;
+    color:#ddd5ca;
 
-    text-decoration:none;
+    font-size:9px;
 
-    font-size:11px;
+    transition:.3s;
 }
 
 .footer-links a:hover{
@@ -616,40 +637,51 @@ footer{
 .copyright{
     max-width:1400px;
 
-    margin:35px auto 0;
+    margin:12px auto 0;
 
-    padding-top:20px;
+    padding-top:10px;
 
-    border-top:1px solid rgba(244,234,216,.08);
+    border-top:1px solid rgba(244,234,216,.2);
 
     text-align:center;
 
-    color:#575149;
+    color:#777169;
 
-    font-size:9px;
-
-    letter-spacing:1px;
+    font-size:8px;
 }
 
 /* ================= MOBILE ================= */
 
-@media(max-width:850px){
+@media(max-width:800px){
 
     .nav{
-        padding:0 20px;
+        padding:0 18px;
+    }
+
+    .logo{
+        font-size:18px;
+        letter-spacing:5px;
     }
 
     .nav-links{
-        display:none;
+        gap:12px;
     }
 
-    .hero-content{
-        padding-top:130px;
+    .nav-links a{
+        font-size:8px;
+    }
+
+    .instagram-nav{
+        padding:7px 9px !important;
+    }
+
+    .hero{
+        min-height:600px;
     }
 
     .hero-title{
-        font-size:90px;
-        letter-spacing:-6px;
+        font-size:75px;
+        letter-spacing:-5px;
     }
 
     .hero-small{
@@ -658,12 +690,16 @@ footer{
     }
 
     .hero-tagline{
-        font-size:12px;
+        font-size:9px;
         letter-spacing:3px;
     }
 
+    .hero-description{
+        font-size:11px;
+    }
+
     .drop{
-        padding:75px 20px;
+        padding:35px 15px;
     }
 
     .drop-heading{
@@ -671,11 +707,11 @@ footer{
     }
 
     .drop-title{
-        font-size:50px;
+        font-size:45px;
     }
 
     .drop-side{
-        margin-top:15px;
+        margin-top:10px;
     }
 
     .products{
@@ -683,56 +719,80 @@ footer{
     }
 
     .product{
-        grid-template-columns:45% 55%;
+        grid-template-columns:42% 58%;
     }
 
     .product-image{
-        min-height:380px;
+        height:300px;
     }
 
     .product-info{
-        padding:22px 17px;
+        padding:15px;
     }
 
     .product-name{
-        font-size:21px;
+        font-size:17px;
     }
 
-    .culture-inner{
+    .product-description{
+        font-size:9px;
+    }
+
+    .price{
+        font-size:19px;
+    }
+
+    .culture-container{
         grid-template-columns:1fr;
 
-        padding:75px 20px;
+        padding:45px 20px;
 
-        gap:45px;
+        gap:30px;
+    }
+
+    .culture{
+        min-height:500px;
+    }
+
+    .culture-container{
+        min-height:500px;
     }
 
     .culture-title{
-        font-size:55px;
+        font-size:48px;
     }
 
-    .instagram-section h2{
-        font-size:43px;
+    .culture-card{
+        width:230px;
     }
 
     footer{
-        padding:40px 20px;
+        padding:20px;
     }
 
     .footer{
         flex-direction:column;
-        gap:25px;
+
+        gap:20px;
     }
 
     .footer-links{
         flex-wrap:wrap;
+
         justify-content:center;
+
+        gap:15px;
     }
 }
 
-@media(max-width:520px){
+@media(max-width:500px){
+
+    .nav-links a:not(.instagram-nav){
+        display:none;
+    }
 
     .hero-title{
-        font-size:70px;
+        font-size:65px;
     }
 
     .product{
@@ -740,54 +800,41 @@ footer{
     }
 
     .product-image{
-        min-height:400px;
+        height:330px;
     }
 
     .product-info{
-        padding:28px;
-    }
-
-    .culture-title{
-        font-size:48px;
+        padding:20px;
     }
 }
 </style>
 </head>
 
-
 <body>
 
-<!-- ================= NAVIGATION ================= -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
 <div class="nav">
 
-    <div class="logo">
+    <a href="#" class="logo">
         FEVNO
-    </div>
+    </a>
 
     <nav class="nav-links">
 
-        <a href="#shop">
-            SHOP
-        </a>
+        <a href="#shop">SHOP</a>
 
-        <a href="#culture">
-            CULTURE
-        </a>
+        <a href="#culture">CULTURE</a>
 
-        <a href="#instagram">
-            CONTACT
-        </a>
+        <a href="#instagram">CONTACT</a>
 
         <a
-            class="nav-instagram"
             href="https://www.instagram.com/fevno_/"
-            target="_blank">
-
+            target="_blank"
+            class="instagram-nav">
             INSTAGRAM
-
         </a>
 
     </nav>
@@ -820,15 +867,12 @@ footer{
     <p class="hero-description">
         FEVNO is a streetwear brand built around modern style,
         South Indian culture and individuality.
+        <br>
         Wear your identity. Move different.
     </p>
 
-    <a
-        href="#shop"
-        class="hero-button">
-
+    <a href="#shop" class="hero-button">
         EXPLORE THE DROP
-
     </a>
 
 </div>
@@ -836,143 +880,149 @@ footer{
 </section>
 
 
-<!-- ================= THE DROP ================= -->
+<!-- ================= DROP ================= -->
 
 <section class="drop" id="shop">
 
-<div class="drop-heading">
+<div class="drop-container">
 
-    <div>
+    <div class="drop-heading">
 
-        <div class="drop-label">
-            FEVNO COLLECTION
+        <div>
+
+            <div class="drop-label">
+                FEVNO COLLECTION
+            </div>
+
+            <h2 class="drop-title">
+                THE DROP
+            </h2>
+
         </div>
 
-        <h2 class="drop-title">
-            THE DROP
-        </h2>
+        <div class="drop-side">
+            LIMITED STREETWEAR PIECES
+        </div>
 
     </div>
 
-    <div class="drop-side">
-        LIMITED STREETWEAR PIECES
+
+    <div class="products">
+
+
+        <!-- PRODUCT 1 -->
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="image_640939fd.jpg"
+                    alt="FEVNO Winter Hoodie">
+
+            </div>
+
+            <div class="product-info">
+
+                <div class="product-number">
+                    FEVNO / 001
+                </div>
+
+                <h3 class="product-name">
+                    FEVNO Winter Hoodie
+                </h3>
+
+                <p class="product-description">
+                    Heavy streetwear hoodie · Black · Unisex
+                </p>
+
+                <div class="price">
+                    ₹799
+                </div>
+
+                <div class="sizes">
+
+                    <span class="size">S</span>
+                    <span class="size">M</span>
+                    <span class="size">L</span>
+                    <span class="size">XL</span>
+                    <span class="size">XXL</span>
+
+                </div>
+
+                <a
+                    href="https://www.instagram.com/fevno_/"
+                    target="_blank"
+                    class="instagram-button">
+
+                    <span class="instagram-icon">◎</span>
+
+                    BOOK ON INSTAGRAM
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 2 -->
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="FEVNO%20Streetwear%20Lookbook.png"
+                    alt="FEVNO Boxy-Fit Shirt">
+
+            </div>
+
+            <div class="product-info">
+
+                <div class="product-number">
+                    FEVNO / 002
+                </div>
+
+                <h3 class="product-name">
+                    FEVNO Boxy-Fit Shirt
+                </h3>
+
+                <p class="product-description">
+                    Beige Sand-Washed · Wide Sleeves ·
+                    Dropped Shoulders · Premium Streetwear
+                </p>
+
+                <div class="price">
+                    ₹1,299
+                </div>
+
+                <div class="sizes">
+
+                    <span class="size">S</span>
+                    <span class="size">M</span>
+                    <span class="size">L</span>
+                    <span class="size">XL</span>
+                    <span class="size">XXL</span>
+
+                </div>
+
+                <a
+                    href="https://www.instagram.com/fevno_/"
+                    target="_blank"
+                    class="instagram-button">
+
+                    <span class="instagram-icon">◎</span>
+
+                    BOOK ON INSTAGRAM
+
+                </a>
+
+            </div>
+
+        </article>
+
     </div>
-
-</div>
-
-
-<div class="products">
-
-
-<!-- ================= PRODUCT 1 ================= -->
-
-<article class="product">
-
-    <div class="product-image">
-
-        <img
-            src="image_640939fd.jpg"
-            alt="FEVNO Winter Hoodie">
-
-    </div>
-
-    <div class="product-info">
-
-        <div class="product-number">
-            FEVNO / 001
-        </div>
-
-        <h3 class="product-name">
-            FEVNO Winter Hoodie
-        </h3>
-
-        <p class="product-description">
-            Heavy streetwear hoodie · Black · Unisex
-        </p>
-
-        <div class="price">
-            ₹799
-        </div>
-
-        <div class="sizes">
-
-            <span class="size">S</span>
-            <span class="size">M</span>
-            <span class="size">L</span>
-            <span class="size">XL</span>
-            <span class="size">XXL</span>
-
-        </div>
-
-        <a
-            class="instagram-button"
-            href="https://www.instagram.com/fevno_/"
-            target="_blank">
-
-            BOOK ON INSTAGRAM
-
-        </a>
-
-    </div>
-
-</article>
-
-
-<!-- ================= PRODUCT 2 ================= -->
-
-<article class="product">
-
-    <div class="product-image">
-
-        <img
-            src="FEVNO%20Streetwear%20Lookbook.png"
-            alt="FEVNO Boxy-Fit Shirt"
-            onerror="this.src='image_640939fd.jpg'">
-
-    </div>
-
-    <div class="product-info">
-
-        <div class="product-number">
-            FEVNO / 002
-        </div>
-
-        <h3 class="product-name">
-            FEVNO Boxy-Fit Shirt
-        </h3>
-
-        <p class="product-description">
-            Beige Sand-Washed · Wide Sleeves ·
-            Dropped Shoulders · Premium Streetwear
-        </p>
-
-        <div class="price">
-            ₹1,299
-        </div>
-
-        <div class="sizes">
-
-            <span class="size">S</span>
-            <span class="size">M</span>
-            <span class="size">L</span>
-            <span class="size">XL</span>
-            <span class="size">XXL</span>
-
-        </div>
-
-        <a
-            class="instagram-button"
-            href="https://www.instagram.com/fevno_/"
-            target="_blank">
-
-            BOOK ON INSTAGRAM
-
-        </a>
-
-    </div>
-
-</article>
-
 
 </div>
 
@@ -983,23 +1033,22 @@ footer{
 
 <section class="culture" id="culture">
 
-<div class="culture-inner">
+<div class="culture-container">
 
     <div>
 
         <div class="culture-small">
-            FEVNO IDENTITY
+            ROOTED IN
         </div>
 
         <h2 class="culture-title">
-            ROOTED IN
-            <span>CULTURE.</span>
+            CULTURE.
         </h2>
 
         <p class="culture-text">
-            FEVNO brings South Indian energy into modern streetwear.
-            Every piece is designed around confidence, individuality
-            and everyday street culture.
+            FEVNO brings South Indian energy into modern
+            streetwear. Every piece is designed around
+            confidence, individuality and everyday street culture.
         </p>
 
     </div>
@@ -1032,15 +1081,15 @@ footer{
     </h2>
 
     <p>
-        New drops · Products · Updates
+        See new drops, products and updates on Instagram.
     </p>
 
     <a
-        class="instagram-main"
         href="https://www.instagram.com/fevno_/"
-        target="_blank">
+        target="_blank"
+        class="instagram-main">
 
-        @FEVNO_
+        ◎ &nbsp; @FEVNO_
 
     </a>
 
@@ -1059,28 +1108,20 @@ footer{
 
     <div class="footer-links">
 
-        <a href="#shop">
-            Shop
-        </a>
+        <a href="#shop">Shop</a>
 
-        <a href="#culture">
-            Culture
-        </a>
+        <a href="#culture">Culture</a>
 
         <a
             href="https://www.instagram.com/fevno_/"
             target="_blank">
-
             Instagram
-
         </a>
 
         <a
             href="https://www.instagram.com/fevno_/"
             target="_blank">
-
             Book a Product
-
         </a>
 
     </div>
