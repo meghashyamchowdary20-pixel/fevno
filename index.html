@@ -23,7 +23,7 @@ body{
     color:#090807;
 }
 
-/* ================= TOP BAR ================= */
+/* ================= ANNOUNCEMENT ================= */
 
 .announcement{
     background:#090807;
@@ -85,7 +85,7 @@ header{
 .nav-actions{
     display:flex;
     align-items:center;
-    gap:18px;
+    gap:15px;
 }
 
 .icon-btn{
@@ -93,19 +93,6 @@ header{
     background:none;
     cursor:pointer;
     font-size:21px;
-}
-
-.cart-count{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    width:20px;
-    height:20px;
-    background:#7b251d;
-    color:white;
-    border-radius:50%;
-    font-size:11px;
-    margin-left:-10px;
 }
 
 .menu-btn{
@@ -190,7 +177,7 @@ header{
     color:white;
 }
 
-/* ================= PROMO ================= */
+/* ================= SECTIONS ================= */
 
 .section{
     max-width:1400px;
@@ -227,6 +214,8 @@ header{
     color:#555;
     font-size:14px;
 }
+
+/* ================= COLLECTIONS ================= */
 
 .promo-grid{
     display:grid;
@@ -406,6 +395,7 @@ header{
     display:flex;
     gap:5px;
     margin-top:14px;
+    flex-wrap:wrap;
 }
 
 .size{
@@ -422,21 +412,26 @@ header{
     color:#fff;
 }
 
-.add-btn{
+/* INSTAGRAM BOOK BUTTON */
+
+.book-btn{
+    display:block;
     width:100%;
     margin-top:14px;
-    border:0;
+    padding:14px;
     background:#090807;
-    color:white;
-    padding:13px;
+    color:#fff;
+    text-align:center;
+    text-decoration:none;
     cursor:pointer;
     font-size:11px;
     font-weight:bold;
     letter-spacing:1px;
     text-transform:uppercase;
+    transition:.25s;
 }
 
-.add-btn:hover{
+.book-btn:hover{
     background:#7b251d;
 }
 
@@ -563,6 +558,10 @@ header{
     letter-spacing:1px;
 }
 
+.insta-btn:hover{
+    background:#7b251d;
+}
+
 /* ================= FOOTER ================= */
 
 footer{
@@ -624,184 +623,6 @@ footer{
     text-align:center;
     color:#666;
     font-size:11px;
-}
-
-/* ================= CART ================= */
-
-.overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.55);
-    z-index:1999;
-    display:none;
-}
-
-.overlay.show{
-    display:block;
-}
-
-.cart{
-    position:fixed;
-    top:0;
-    right:-450px;
-    width:min(430px,100%);
-    height:100vh;
-    background:#f4ead8;
-    z-index:2000;
-    transition:.35s;
-    display:flex;
-    flex-direction:column;
-}
-
-.cart.open{
-    right:0;
-}
-
-.cart-head{
-    padding:22px;
-    border-bottom:1px solid #ccc;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.cart-head h2{
-    font-size:20px;
-}
-
-.close{
-    border:0;
-    background:none;
-    font-size:25px;
-    cursor:pointer;
-}
-
-.cart-items{
-    flex:1;
-    overflow:auto;
-    padding:20px;
-}
-
-.cart-item{
-    display:flex;
-    gap:12px;
-    border-bottom:1px solid #ccc;
-    padding-bottom:15px;
-    margin-bottom:15px;
-}
-
-.cart-item img{
-    width:80px;
-    height:90px;
-    object-fit:cover;
-}
-
-.cart-item-info{
-    flex:1;
-}
-
-.cart-item-name{
-    font-weight:bold;
-    font-size:13px;
-}
-
-.cart-item-price{
-    margin-top:8px;
-    font-size:12px;
-}
-
-.quantity{
-    display:flex;
-    gap:8px;
-    align-items:center;
-    margin-top:10px;
-}
-
-.quantity button{
-    width:25px;
-    height:25px;
-    border:1px solid #aaa;
-    background:none;
-    cursor:pointer;
-}
-
-.remove{
-    border:0;
-    background:none;
-    color:#7b251d;
-    cursor:pointer;
-    font-size:11px;
-    margin-top:8px;
-}
-
-.cart-bottom{
-    padding:20px;
-    border-top:1px solid #ccc;
-}
-
-.cart-total{
-    display:flex;
-    justify-content:space-between;
-    font-size:20px;
-    font-weight:bold;
-    margin-bottom:15px;
-}
-
-.checkout{
-    width:100%;
-    padding:15px;
-    background:#7b251d;
-    color:white;
-    border:0;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-/* ================= SEARCH ================= */
-
-.search-box{
-    position:fixed;
-    inset:0;
-    background:rgba(9,8,7,.96);
-    z-index:3000;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:30px;
-}
-
-.search-box.show{
-    display:flex;
-}
-
-.search-inner{
-    width:100%;
-    max-width:700px;
-}
-
-.search-close{
-    color:white;
-    background:none;
-    border:0;
-    font-size:30px;
-    cursor:pointer;
-    float:right;
-}
-
-.search-input{
-    width:100%;
-    margin-top:80px;
-    background:none;
-    border:0;
-    border-bottom:2px solid #c99645;
-    color:white;
-    font-size:45px;
-    padding:15px 0;
-    outline:none;
-}
-
-.search-input::placeholder{
-    color:#666;
 }
 
 /* ================= MOBILE ================= */
@@ -901,15 +722,6 @@ footer{
         font-size:14px;
     }
 
-    .sizes{
-        flex-wrap:wrap;
-    }
-
-    .size{
-        min-width:27px;
-        height:27px;
-    }
-
     .feature-inner{
         padding:60px 20px;
         gap:35px;
@@ -923,23 +735,23 @@ footer{
         grid-template-columns:1fr;
         padding:55px 20px;
     }
-
-    .search-input{
-        font-size:30px;
-    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- ANNOUNCEMENT -->
+<!-- ================= ANNOUNCEMENT ================= -->
+
 <div class="announcement">
     FEVNO — STREETWEAR ROOTED IN CULTURE
 </div>
 
-<!-- NAVIGATION -->
+
+<!-- ================= NAVBAR ================= -->
+
 <header>
+
 <nav class="nav">
 
     <a href="#home" style="text-decoration:none;color:inherit;">
@@ -947,28 +759,57 @@ footer{
     </a>
 
     <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#shop">T-Shirts</a></li>
-        <li><a href="#shop">Hoodies</a></li>
-        <li><a href="#shop">Collections</a></li>
-        <li><a href="#story">Story</a></li>
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#shop">T-Shirts</a>
+        </li>
+
+        <li>
+            <a href="#shop">Hoodies</a>
+        </li>
+
+        <li>
+            <a href="#shop">Collections</a>
+        </li>
+
+        <li>
+            <a href="#story">Story</a>
+        </li>
+
     </ul>
 
     <div class="nav-actions">
 
-        <button class="icon-btn" onclick="openSearch()">⌕</button>
+        <button class="icon-btn"
+                onclick="openSearch()">
+            ⌕
+        </button>
 
-        <button class="icon-btn" onclick="openCart()">🛒</button>
-        <span class="cart-count" id="cartCount">0</span>
+        <a class="icon-btn"
+           href="https://www.instagram.com/fevno_/"
+           target="_blank"
+           title="FEVNO Instagram">
+            ◎
+        </a>
 
-        <button class="icon-btn menu-btn" onclick="mobileMenu()">☰</button>
+        <button class="icon-btn menu-btn"
+                onclick="mobileMenu()">
+            ☰
+        </button>
 
     </div>
 
 </nav>
+
 </header>
 
-<!-- HERO -->
+
+<!-- ================= HERO ================= -->
+
 <section class="hero" id="home">
 
     <div class="hero-content">
@@ -989,27 +830,40 @@ footer{
         </p>
 
         <div class="hero-buttons">
-            <a href="#shop" class="btn btn-primary">
-                Shop the drop
+
+            <a href="#shop"
+               class="btn btn-primary">
+                SHOP THE DROP
             </a>
 
-            <a href="#story" class="btn btn-dark">
-                Our story
+            <a href="#story"
+               class="btn btn-dark">
+                OUR STORY
             </a>
+
         </div>
 
     </div>
 
 </section>
 
-<!-- PROMOTIONS -->
+
+<!-- ================= COLLECTIONS ================= -->
+
 <section class="section">
 
     <div class="section-head">
 
         <div>
-            <div class="section-label">Shop FEVNO</div>
-            <h2 class="section-title">THE COLLECTIONS</h2>
+
+            <div class="section-label">
+                SHOP FEVNO
+            </div>
+
+            <h2 class="section-title">
+                THE COLLECTIONS
+            </h2>
+
         </div>
 
         <p class="section-description">
@@ -1019,99 +873,164 @@ footer{
 
     </div>
 
+
     <div class="promo-grid">
 
         <div class="promo">
-            <div class="promo-number">01</div>
-            <h3>Boxy Tees</h3>
-            <p>Relaxed silhouettes for everyday streetwear.</p>
+
+            <div class="promo-number">
+                01
+            </div>
+
+            <h3>
+                BOXY TEES
+            </h3>
+
+            <p>
+                Relaxed silhouettes for everyday streetwear.
+            </p>
+
         </div>
 
-        <div class="promo">
-            <div class="promo-number">02</div>
-            <h3>Heavy Hoodies</h3>
-            <p>Premium layers made for the streets.</p>
-        </div>
 
         <div class="promo">
-            <div class="promo-number">03</div>
-            <h3>FEVNO Drops</h3>
-            <p>Limited pieces inspired by culture.</p>
+
+            <div class="promo-number">
+                02
+            </div>
+
+            <h3>
+                HEAVY HOODIES
+            </h3>
+
+            <p>
+                Premium layers made for the streets.
+            </p>
+
+        </div>
+
+
+        <div class="promo">
+
+            <div class="promo-number">
+                03
+            </div>
+
+            <h3>
+                FEVNO DROPS
+            </h3>
+
+            <p>
+                Limited pieces inspired by culture.
+            </p>
+
         </div>
 
     </div>
 
 </section>
 
-<!-- SHOP -->
-<section class="shop" id="shop">
+
+<!-- ================= SHOP ================= -->
+
+<section class="shop"
+         id="shop">
 
 <div class="section">
 
     <div class="section-head">
 
         <div>
-            <div class="section-label">FEVNO Store</div>
-            <h2 class="section-title">LATEST DROP</h2>
+
+            <div class="section-label">
+                FEVNO STORE
+            </div>
+
+            <h2 class="section-title">
+                LATEST DROP
+            </h2>
+
         </div>
 
         <p class="section-description">
-            Select your size and add your favourite piece to the cart.
+            Choose your favourite piece and book directly through Instagram.
         </p>
 
     </div>
 
+
     <!-- FILTERS -->
+
     <div class="filters">
 
         <div class="filter-buttons">
 
             <button class="filter-btn active"
                     onclick="filterProducts('all',this)">
-                All
+                ALL
             </button>
 
             <button class="filter-btn"
                     onclick="filterProducts('tshirt',this)">
-                T-Shirts
+                T-SHIRTS
             </button>
 
             <button class="filter-btn"
                     onclick="filterProducts('hoodie',this)">
-                Hoodies
+                HOODIES
             </button>
 
         </div>
 
-        <select class="sort-select" onchange="sortProducts(this.value)">
-            <option value="featured">Featured</option>
-            <option value="low">Price: Low to High</option>
-            <option value="high">Price: High to Low</option>
+
+        <select class="sort-select"
+                onchange="sortProducts(this.value)">
+
+            <option value="featured">
+                Featured
+            </option>
+
+            <option value="low">
+                Price: Low to High
+            </option>
+
+            <option value="high">
+                Price: High to Low
+            </option>
+
         </select>
 
     </div>
 
-    <!-- PRODUCT GRID -->
-    <div class="product-grid" id="productGrid">
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <div class="product-grid"
+         id="productGrid">
+
 
         <!-- PRODUCT 1 -->
+
         <article class="product"
                  data-category="hoodie"
                  data-price="799">
 
             <div class="product-image">
 
-                <span class="badge">BESTSELLER</span>
+                <span class="badge">
+                    BESTSELLER
+                </span>
 
                 <img src="image_640939fd.jpg"
                      alt="FEVNO Winter Hoodie">
 
             </div>
 
+
             <div class="product-info">
 
                 <div class="product-category">
-                    Hoodie
+                    HOODIE
                 </div>
 
                 <div class="product-name">
@@ -1124,34 +1043,43 @@ footer{
 
                 <div class="price">
                     ₹799
-                    <span class="old-price">₹1,199</span>
+
+                    <span class="old-price">
+                        ₹1,199
+                    </span>
                 </div>
+
 
                 <div class="sizes">
 
                     <button class="size"
-                            onclick="selectSize(this)">S</button>
+                            onclick="selectSize(this)">
+                        S
+                    </button>
 
                     <button class="size"
-                            onclick="selectSize(this)">M</button>
+                            onclick="selectSize(this)">
+                        M
+                    </button>
 
                     <button class="size"
-                            onclick="selectSize(this)">L</button>
+                            onclick="selectSize(this)">
+                        L
+                    </button>
 
                     <button class="size"
-                            onclick="selectSize(this)">XL</button>
+                            onclick="selectSize(this)">
+                        XL
+                    </button>
 
                 </div>
 
-                <button class="add-btn"
-                        onclick="addToCart(
-                        'FEVNO Winter Hoodie',
-                        799,
-                        'image_640939fd.jpg',
-                        this
-                        )">
-                    Add to cart
-                </button>
+
+                <a class="book-btn"
+                   href="https://www.instagram.com/fevno_/"
+                   target="_blank">
+                    BOOK ON INSTAGRAM
+                </a>
 
             </div>
 
@@ -1159,23 +1087,27 @@ footer{
 
 
         <!-- PRODUCT 2 -->
+
         <article class="product"
                  data-category="tshirt"
                  data-price="1299">
 
             <div class="product-image">
 
-                <span class="badge">NEW</span>
+                <span class="badge">
+                    NEW
+                </span>
 
                 <img src="FEVNO%20Streetwear%20Lookbook.png"
                      alt="FEVNO Boxy-Fit Shirt">
 
             </div>
 
+
             <div class="product-info">
 
                 <div class="product-category">
-                    T-Shirt
+                    T-SHIRT
                 </div>
 
                 <div class="product-name">
@@ -1190,34 +1122,42 @@ footer{
                     ₹1,299
                 </div>
 
+
                 <div class="sizes">
 
                     <button class="size"
-                            onclick="selectSize(this)">S</button>
+                            onclick="selectSize(this)">
+                        S
+                    </button>
 
                     <button class="size"
-                            onclick="selectSize(this)">M</button>
+                            onclick="selectSize(this)">
+                        M
+                    </button>
 
                     <button class="size"
-                            onclick="selectSize(this)">L</button>
+                            onclick="selectSize(this)">
+                        L
+                    </button>
 
                     <button class="size"
-                            onclick="selectSize(this)">XL</button>
+                            onclick="selectSize(this)">
+                        XL
+                    </button>
 
                     <button class="size"
-                            onclick="selectSize(this)">XXL</button>
+                            onclick="selectSize(this)">
+                        XXL
+                    </button>
 
                 </div>
 
-                <button class="add-btn"
-                        onclick="addToCart(
-                        'FEVNO Boxy-Fit Shirt',
-                        1299,
-                        'FEVNO%20Streetwear%20Lookbook.png',
-                        this
-                        )">
-                    Add to cart
-                </button>
+
+                <a class="book-btn"
+                   href="https://www.instagram.com/fevno_/"
+                   target="_blank">
+                    BOOK ON INSTAGRAM
+                </a>
 
             </div>
 
@@ -1225,23 +1165,27 @@ footer{
 
 
         <!-- PRODUCT 3 -->
+
         <article class="product"
                  data-category="hoodie"
                  data-price="1799">
 
             <div class="product-image">
 
-                <span class="badge">DROP 01</span>
+                <span class="badge">
+                    DROP 01
+                </span>
 
                 <img src="image_640939fd.jpg"
                      alt="FEVNO Street Hoodie">
 
             </div>
 
+
             <div class="product-info">
 
                 <div class="product-category">
-                    Hoodie
+                    HOODIE
                 </div>
 
                 <div class="product-name">
@@ -1256,31 +1200,37 @@ footer{
                     ₹1,799
                 </div>
 
+
                 <div class="sizes">
 
                     <button class="size"
-                            onclick="selectSize(this)">M</button>
+                            onclick="selectSize(this)">
+                        M
+                    </button>
 
                     <button class="size"
-                            onclick="selectSize(this)">L</button>
+                            onclick="selectSize(this)">
+                        L
+                    </button>
 
                     <button class="size"
-                            onclick="selectSize(this)">XL</button>
+                            onclick="selectSize(this)">
+                        XL
+                    </button>
 
                     <button class="size"
-                            onclick="selectSize(this)">XXL</button>
+                            onclick="selectSize(this)">
+                        XXL
+                    </button>
 
                 </div>
 
-                <button class="add-btn"
-                        onclick="addToCart(
-                        'FEVNO Street Hoodie',
-                        1799,
-                        'image_640939fd.jpg',
-                        this
-                        )">
-                    Add to cart
-                </button>
+
+                <a class="book-btn"
+                   href="https://www.instagram.com/fevno_/"
+                   target="_blank">
+                    BOOK ON INSTAGRAM
+                </a>
 
             </div>
 
@@ -1288,23 +1238,27 @@ footer{
 
 
         <!-- PRODUCT 4 -->
+
         <article class="product"
                  data-category="tshirt"
                  data-price="999">
 
             <div class="product-image">
 
-                <span class="badge">LIMITED</span>
+                <span class="badge">
+                    LIMITED
+                </span>
 
                 <img src="FEVNO%20Streetwear%20Lookbook.png"
                      alt="FEVNO Core Tee">
 
             </div>
 
+
             <div class="product-info">
 
                 <div class="product-category">
-                    T-Shirt
+                    T-SHIRT
                 </div>
 
                 <div class="product-name">
@@ -1319,31 +1273,37 @@ footer{
                     ₹999
                 </div>
 
+
                 <div class="sizes">
 
                     <button class="size"
-                            onclick="selectSize(this)">S</button>
+                            onclick="selectSize(this)">
+                        S
+                    </button>
 
                     <button class="size"
-                            onclick="selectSize(this)">M</button>
+                            onclick="selectSize(this)">
+                        M
+                    </button>
 
                     <button class="size"
-                            onclick="selectSize(this)">L</button>
+                            onclick="selectSize(this)">
+                        L
+                    </button>
 
                     <button class="size"
-                            onclick="selectSize(this)">XL</button>
+                            onclick="selectSize(this)">
+                        XL
+                    </button>
 
                 </div>
 
-                <button class="add-btn"
-                        onclick="addToCart(
-                        'FEVNO Core Tee',
-                        999,
-                        'FEVNO%20Streetwear%20Lookbook.png',
-                        this
-                        )">
-                    Add to cart
-                </button>
+
+                <a class="book-btn"
+                   href="https://www.instagram.com/fevno_/"
+                   target="_blank">
+                    BOOK ON INSTAGRAM
+                </a>
 
             </div>
 
@@ -1356,17 +1316,20 @@ footer{
 </section>
 
 
-<!-- BRAND STORY -->
-<section class="feature" id="story">
+<!-- ================= STORY ================= -->
+
+<section class="feature"
+         id="story">
 
     <div class="feature-inner">
 
         <div class="feature-image"></div>
 
+
         <div>
 
             <div class="section-label">
-                The FEVNO Identity
+                THE FEVNO IDENTITY
             </div>
 
             <h2>
@@ -1381,6 +1344,7 @@ footer{
                 No unnecessary noise. Just strong silhouettes,
                 confident details and clothing that feels like you.
             </p>
+
 
             <div class="feature-list">
 
@@ -1409,30 +1373,38 @@ footer{
 </section>
 
 
-<!-- CULTURE -->
+<!-- ================= CULTURE ================= -->
+
 <section class="section">
 
     <div class="section-head">
 
         <div>
+
             <div class="section-label">
-                More than clothing
+                MORE THAN CLOTHING
             </div>
 
             <h2 class="section-title">
                 FEVNO CULTURE
             </h2>
+
         </div>
 
     </div>
+
 
     <div class="culture-grid">
 
         <div class="culture-card">
 
-            <span>01 / ROOTS</span>
+            <span>
+                01 / ROOTS
+            </span>
 
-            <h3>OUR ROOTS</h3>
+            <h3>
+                OUR ROOTS
+            </h3>
 
             <p>
                 Inspired by the streets, people and culture around us.
@@ -1440,11 +1412,16 @@ footer{
 
         </div>
 
+
         <div class="culture-card">
 
-            <span>02 / ATTITUDE</span>
+            <span>
+                02 / ATTITUDE
+            </span>
 
-            <h3>OUR ATTITUDE</h3>
+            <h3>
+                OUR ATTITUDE
+            </h3>
 
             <p>
                 Wear what feels right. Move different.
@@ -1452,11 +1429,16 @@ footer{
 
         </div>
 
+
         <div class="culture-card">
 
-            <span>03 / FUTURE</span>
+            <span>
+                03 / FUTURE
+            </span>
 
-            <h3>OUR FUTURE</h3>
+            <h3>
+                OUR FUTURE
+            </h3>
 
             <p>
                 Building a new generation of Indian streetwear.
@@ -1469,11 +1451,12 @@ footer{
 </section>
 
 
-<!-- INSTAGRAM -->
+<!-- ================= INSTAGRAM ================= -->
+
 <section class="instagram section">
 
     <div class="section-label">
-        Follow the movement
+        FOLLOW THE MOVEMENT
     </div>
 
     <h2>
@@ -1493,7 +1476,8 @@ footer{
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
     <div class="footer-main">
@@ -1514,69 +1498,86 @@ footer{
 
         <div>
 
-            <h4>Shop</h4>
+            <h4>
+                SHOP
+            </h4>
 
             <ul class="footer-links">
 
                 <li>
-                    <a href="#shop">T-Shirts</a>
-                </li>
-
-                <li>
-                    <a href="#shop">Hoodies</a>
-                </li>
-
-                <li>
-                    <a href="#shop">Latest Drop</a>
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <div>
-
-            <h4>Explore</h4>
-
-            <ul class="footer-links">
-
-                <li>
-                    <a href="#story">Our Story</a>
-                </li>
-
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="https://www.instagram.com/fevno_/"
-                       target="_blank">
-                       Instagram
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <div>
-
-            <h4>Contact</h4>
-
-            <ul class="footer-links">
-
-                <li>
-                    <a href="https://www.instagram.com/fevno_/"
-                       target="_blank">
-                       Instagram DM
+                    <a href="#shop">
+                        T-Shirts
                     </a>
                 </li>
 
                 <li>
                     <a href="#shop">
-                        Shop FEVNO
+                        Hoodies
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#shop">
+                        Latest Drop
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                EXPLORE
+            </h4>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="#story">
+                        Our Story
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/fevno_/"
+                       target="_blank">
+                        Instagram
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                CONTACT
+            </h4>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="https://www.instagram.com/fevno_/"
+                       target="_blank">
+                        Instagram DM
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/fevno_/"
+                       target="_blank">
+                        Book a Product
                     </a>
                 </li>
 
@@ -1585,6 +1586,7 @@ footer{
         </div>
 
     </div>
+
 
     <div class="footer-bottom">
         © 2026 FEVNO. ALL RIGHTS RESERVED.
@@ -1593,61 +1595,8 @@ footer{
 </footer>
 
 
-<!-- CART OVERLAY -->
-<div class="overlay"
-     id="overlay"
-     onclick="closeCart()">
-</div>
+<!-- ================= SEARCH ================= -->
 
-
-<!-- CART -->
-<div class="cart" id="cart">
-
-    <div class="cart-head">
-
-        <h2>
-            YOUR CART
-        </h2>
-
-        <button class="close"
-                onclick="closeCart()">
-            ×
-        </button>
-
-    </div>
-
-    <div class="cart-items"
-         id="cartItems">
-
-        <p style="color:#777;font-size:13px;">
-            Your cart is empty.
-        </p>
-
-    </div>
-
-    <div class="cart-bottom">
-
-        <div class="cart-total">
-
-            <span>Total</span>
-
-            <span id="cartTotal">
-                ₹0
-            </span>
-
-        </div>
-
-        <button class="checkout"
-                onclick="checkoutWhatsApp()">
-            ORDER ON WHATSAPP
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- SEARCH -->
 <div class="search-box"
      id="searchBox">
 
@@ -1673,207 +1622,7 @@ footer{
 
 <script>
 
-/* ================= CART DATA ================= */
-
-let cart = [];
-
-
-/* ================= OPEN CART ================= */
-
-function openCart(){
-
-    document.getElementById("cart")
-        .classList.add("open");
-
-    document.getElementById("overlay")
-        .classList.add("show");
-
-    renderCart();
-}
-
-
-/* ================= CLOSE CART ================= */
-
-function closeCart(){
-
-    document.getElementById("cart")
-        .classList.remove("open");
-
-    document.getElementById("overlay")
-        .classList.remove("show");
-}
-
-
-/* ================= ADD TO CART ================= */
-
-function addToCart(name,price,image,button){
-
-    let product = button.closest(".product");
-
-    let selected =
-        product.querySelector(".size.selected");
-
-    let size = selected
-        ? selected.innerText
-        : "M";
-
-    let existing = cart.find(item =>
-        item.name === name &&
-        item.size === size
-    );
-
-    if(existing){
-
-        existing.quantity++;
-
-    }else{
-
-        cart.push({
-            name:name,
-            price:price,
-            image:image,
-            size:size,
-            quantity:1
-        });
-
-    }
-
-    updateCartCount();
-
-    openCart();
-}
-
-
-/* ================= UPDATE CART COUNT ================= */
-
-function updateCartCount(){
-
-    let count = cart.reduce(
-        (total,item) =>
-        total + item.quantity,
-        0
-    );
-
-    document.getElementById("cartCount")
-        .innerText = count;
-}
-
-
-/* ================= RENDER CART ================= */
-
-function renderCart(){
-
-    let container =
-        document.getElementById("cartItems");
-
-    if(cart.length === 0){
-
-        container.innerHTML =
-        `<p style="color:#777;font-size:13px;">
-            Your cart is empty.
-        </p>`;
-
-        document.getElementById("cartTotal")
-            .innerText = "₹0";
-
-        return;
-    }
-
-    let total = 0;
-
-    container.innerHTML = cart.map(
-        (item,index) => {
-
-            total +=
-                item.price *
-                item.quantity;
-
-            return `
-
-            <div class="cart-item">
-
-                <img src="${item.image}"
-                     alt="${item.name}">
-
-                <div class="cart-item-info">
-
-                    <div class="cart-item-name">
-                        ${item.name}
-                    </div>
-
-                    <div class="cart-item-price">
-                        ₹${item.price} · Size ${item.size}
-                    </div>
-
-                    <div class="quantity">
-
-                        <button
-                        onclick="changeQuantity(${index},-1)">
-                            −
-                        </button>
-
-                        <span>
-                            ${item.quantity}
-                        </span>
-
-                        <button
-                        onclick="changeQuantity(${index},1)">
-                            +
-                        </button>
-
-                    </div>
-
-                    <button
-                    class="remove"
-                    onclick="removeItem(${index})">
-                        REMOVE
-                    </button>
-
-                </div>
-
-            </div>
-
-            `;
-
-        }
-    ).join("");
-
-    document.getElementById("cartTotal")
-        .innerText = "₹" + total;
-}
-
-
-/* ================= QUANTITY ================= */
-
-function changeQuantity(index,value){
-
-    cart[index].quantity += value;
-
-    if(cart[index].quantity <= 0){
-
-        cart.splice(index,1);
-
-    }
-
-    updateCartCount();
-
-    renderCart();
-}
-
-
-/* ================= REMOVE ================= */
-
-function removeItem(index){
-
-    cart.splice(index,1);
-
-    updateCartCount();
-
-    renderCart();
-}
-
-
-/* ================= SIZE ================= */
+/* ================= SIZE SELECT ================= */
 
 function selectSize(button){
 
@@ -1882,7 +1631,9 @@ function selectSize(button){
 
     parent.querySelectorAll(".size")
         .forEach(size => {
+
             size.classList.remove("selected");
+
         });
 
     button.classList.add("selected");
@@ -1895,10 +1646,13 @@ function filterProducts(category,button){
 
     document.querySelectorAll(".filter-btn")
         .forEach(btn => {
+
             btn.classList.remove("active");
+
         });
 
     button.classList.add("active");
+
 
     document.querySelectorAll(".product")
         .forEach(product => {
@@ -1933,6 +1687,7 @@ function sortProducts(type){
             grid.querySelectorAll(".product")
         );
 
+
     if(type === "low"){
 
         products.sort(
@@ -1942,6 +1697,7 @@ function sortProducts(type){
         );
 
     }
+
 
     if(type === "high"){
 
@@ -1953,9 +1709,13 @@ function sortProducts(type){
 
     }
 
-    products.forEach(product =>
-        grid.appendChild(product)
-    );
+
+    products.forEach(product => {
+
+        grid.appendChild(product);
+
+    });
+
 }
 
 
@@ -1996,6 +1756,7 @@ function searchProducts(){
         .value
         .toLowerCase();
 
+
     document.querySelectorAll(".product")
         .forEach(product => {
 
@@ -2004,6 +1765,7 @@ function searchProducts(){
                 .querySelector(".product-name")
                 .innerText
                 .toLowerCase();
+
 
             if(name.includes(search)){
 
@@ -2020,72 +1782,13 @@ function searchProducts(){
 }
 
 
-/* ================= WHATSAPP ================= */
-
-function checkoutWhatsApp(){
-
-    if(cart.length === 0){
-
-        alert("Your cart is empty.");
-
-        return;
-    }
-
-    let message =
-        "Hello FEVNO! I want to order:%0A%0A";
-
-    let total = 0;
-
-    cart.forEach(item => {
-
-        let itemTotal =
-            item.price *
-            item.quantity;
-
-        total += itemTotal;
-
-        message +=
-            "• " +
-            item.name +
-            " | Size: " +
-            item.size +
-            " | Qty: " +
-            item.quantity +
-            " | ₹" +
-            itemTotal +
-            "%0A";
-
-    });
-
-    message +=
-        "%0ATotal: ₹" +
-        total;
-
-    /*
-       IMPORTANT:
-       Replace 91XXXXXXXXXX with
-       your actual FEVNO WhatsApp number.
-    */
-
-    let phone =
-        "8121686565";
-
-    window.open(
-        "https://wa.me/" +
-        phone +
-        "?text=" +
-        message,
-        "_blank"
-    );
-}
-
-
 /* ================= MOBILE MENU ================= */
 
 function mobileMenu(){
 
     let nav =
         document.querySelector(".nav-links");
+
 
     if(nav.style.display === "flex"){
 
@@ -2096,13 +1799,21 @@ function mobileMenu(){
         nav.style.display = "flex";
 
         nav.style.position = "absolute";
+
         nav.style.top = "65px";
+
         nav.style.left = "0";
+
         nav.style.right = "0";
+
         nav.style.background = "#f4ead8";
+
         nav.style.padding = "25px";
+
         nav.style.flexDirection = "column";
-        nav.style.borderBottom = "1px solid #ccc";
+
+        nav.style.borderBottom =
+            "1px solid #ccc";
 
     }
 
