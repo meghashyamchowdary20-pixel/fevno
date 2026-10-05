@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>FEVNO | South Indian Streetwear</title>
+<title>FEVNO — South Indian Streetwear</title>
 
 <style>
 *{
@@ -20,11 +20,12 @@ html{
 body{
     background:#090807;
     color:#f4ead8;
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 a{
     text-decoration:none;
+    color:inherit;
 }
 
 /* ================= HEADER ================= */
@@ -35,16 +36,16 @@ header{
     left:0;
     width:100%;
     height:55px;
-    z-index:1000;
+    z-index:9999;
 
-    background:rgba(8,7,6,.9);
+    background:rgba(8,7,6,.88);
     backdrop-filter:blur(12px);
 
     border-bottom:1px solid rgba(201,150,69,.45);
 }
 
 .nav{
-    max-width:1450px;
+    max-width:1400px;
     height:55px;
     margin:auto;
     padding:0 45px;
@@ -72,6 +73,7 @@ header{
     font-size:10px;
     font-weight:700;
     letter-spacing:.5px;
+
     transition:.3s;
 }
 
@@ -80,9 +82,9 @@ header{
 }
 
 .instagram-nav{
-    color:#c99645 !important;
     border:1px solid #c99645;
     padding:9px 16px;
+    color:#c99645 !important;
 }
 
 /* ================= HERO ================= */
@@ -102,17 +104,17 @@ header{
 
     background-image:
         linear-gradient(
-            rgba(5,4,3,.43),
+            rgba(5,4,3,.42),
             rgba(5,4,3,.72)
         ),
         url("fevno-hero.jpg");
 
     background-size:cover;
-    background-position:center;
+    background-position:center center;
     background-repeat:no-repeat;
 }
 
-.hero::before{
+.hero::after{
     content:"";
     position:absolute;
     inset:0;
@@ -120,9 +122,11 @@ header{
     background:
         radial-gradient(
             circle at center,
-            transparent 20%,
-            rgba(0,0,0,.45) 100%
+            transparent 15%,
+            rgba(0,0,0,.5) 100%
         );
+
+    pointer-events:none;
 }
 
 .hero-content{
@@ -130,7 +134,9 @@ header{
     z-index:2;
 
     width:100%;
-    padding:100px 20px 50px;
+    max-width:1100px;
+
+    padding:100px 20px 40px;
 }
 
 .hero-small{
@@ -141,10 +147,12 @@ header{
 
     letter-spacing:6px;
 
-    margin-bottom:16px;
+    margin-bottom:18px;
 }
 
 .hero-title{
+    color:#f4ead8;
+
     font-size:clamp(90px,14vw,180px);
 
     line-height:.78;
@@ -153,9 +161,8 @@ header{
 
     letter-spacing:-8px;
 
-    color:#f4ead8;
-
-    text-shadow:0 5px 30px rgba(0,0,0,.7);
+    text-shadow:
+        0 5px 30px rgba(0,0,0,.8);
 }
 
 .hero-title span{
@@ -183,7 +190,7 @@ header{
 }
 
 .hero-description{
-    max-width:520px;
+    max-width:540px;
 
     margin:0 auto 25px;
 
@@ -197,10 +204,10 @@ header{
 .hero-button{
     display:inline-block;
 
+    padding:13px 25px;
+
     background:#d39a3d;
     color:#090807;
-
-    padding:13px 25px;
 
     font-size:10px;
     font-weight:900;
@@ -251,6 +258,7 @@ header{
     color:#f4ead8;
 
     font-size:54px;
+
     line-height:.9;
 
     font-weight:1000;
@@ -285,11 +293,17 @@ header{
 
     grid-template-columns:42% 58%;
 
-    border:1px solid rgba(244,234,216,.2);
-
     background:#0b0a09;
 
+    border:1px solid rgba(244,234,216,.2);
+
     overflow:hidden;
+
+    transition:.3s;
+}
+
+.product:hover{
+    border-color:rgba(201,150,69,.7);
 }
 
 .product-image{
@@ -363,7 +377,6 @@ header{
 
 .sizes{
     display:flex;
-
     gap:5px;
 
     margin-bottom:14px;
@@ -384,6 +397,8 @@ header{
 }
 
 .instagram-button{
+    width:100%;
+
     display:flex;
 
     align-items:center;
@@ -391,15 +406,12 @@ header{
 
     gap:8px;
 
-    width:100%;
+    padding:12px;
 
     background:#d59b3c;
     color:#080706;
 
-    padding:12px;
-
     font-size:9px;
-
     font-weight:900;
 
     letter-spacing:.8px;
@@ -422,6 +434,8 @@ header{
 
     position:relative;
 
+    color:#090807;
+
     background-image:
         linear-gradient(
             rgba(244,234,216,.72),
@@ -431,8 +445,7 @@ header{
 
     background-size:cover;
     background-position:center;
-
-    color:#090807;
+    background-repeat:no-repeat;
 }
 
 .culture-container{
@@ -528,6 +541,8 @@ header{
 .instagram-section{
     min-height:190px;
 
+    position:relative;
+
     display:flex;
 
     flex-direction:column;
@@ -538,20 +553,21 @@ header{
 
     text-align:center;
 
-    position:relative;
-
     background-image:
         linear-gradient(
-            rgba(5,4,3,.7),
+            rgba(5,4,3,.68),
             rgba(5,4,3,.88)
         ),
         url("fevno-instagram.jpg");
 
     background-size:cover;
     background-position:center;
+    background-repeat:no-repeat;
 }
 
 .instagram-section h2{
+    color:#f4ead8;
+
     font-size:23px;
 
     margin-bottom:10px;
@@ -566,6 +582,8 @@ header{
 }
 
 .instagram-main{
+    display:inline-block;
+
     border:1px solid #c99645;
 
     color:#c99645;
@@ -745,6 +763,8 @@ footer{
     .culture-container{
         grid-template-columns:1fr;
 
+        min-height:500px;
+
         padding:45px 20px;
 
         gap:30px;
@@ -754,16 +774,16 @@ footer{
         min-height:500px;
     }
 
-    .culture-container{
-        min-height:500px;
-    }
-
     .culture-title{
         font-size:48px;
     }
 
     .culture-card{
         width:230px;
+    }
+
+    .instagram-section{
+        min-height:220px;
     }
 
     footer{
@@ -824,11 +844,17 @@ footer{
 
     <nav class="nav-links">
 
-        <a href="#shop">SHOP</a>
+        <a href="#shop">
+            SHOP
+        </a>
 
-        <a href="#culture">CULTURE</a>
+        <a href="#culture">
+            CULTURE
+        </a>
 
-        <a href="#instagram">CONTACT</a>
+        <a href="#instagram">
+            CONTACT
+        </a>
 
         <a
             href="https://www.instagram.com/fevno_/"
@@ -871,7 +897,9 @@ footer{
         Wear your identity. Move different.
     </p>
 
-    <a href="#shop" class="hero-button">
+    <a
+        href="#shop"
+        class="hero-button">
         EXPLORE THE DROP
     </a>
 
@@ -880,7 +908,7 @@ footer{
 </section>
 
 
-<!-- ================= DROP ================= -->
+<!-- ================= THE DROP ================= -->
 
 <section class="drop" id="shop">
 
@@ -955,7 +983,9 @@ footer{
                     target="_blank"
                     class="instagram-button">
 
-                    <span class="instagram-icon">◎</span>
+                    <span class="instagram-icon">
+                        ◎
+                    </span>
 
                     BOOK ON INSTAGRAM
 
@@ -1012,7 +1042,9 @@ footer{
                     target="_blank"
                     class="instagram-button">
 
-                    <span class="instagram-icon">◎</span>
+                    <span class="instagram-icon">
+                        ◎
+                    </span>
 
                     BOOK ON INSTAGRAM
 
@@ -1021,6 +1053,7 @@ footer{
             </div>
 
         </article>
+
 
     </div>
 
@@ -1108,9 +1141,13 @@ footer{
 
     <div class="footer-links">
 
-        <a href="#shop">Shop</a>
+        <a href="#shop">
+            Shop
+        </a>
 
-        <a href="#culture">Culture</a>
+        <a href="#culture">
+            Culture
+        </a>
 
         <a
             href="https://www.instagram.com/fevno_/"
